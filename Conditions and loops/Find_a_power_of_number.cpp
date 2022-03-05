@@ -34,20 +34,7 @@ int main() {
    }
    cout<<m<<endl;
 }
-#include<iostream>
-using namespace std;
 
-int main() {
-     int x,n;
-   cin>>x>>n;
-   int i=1;
-   int m=1;
-   while(i<=n){
-    m=m*x;
-    i=i+1;
-   }
-   cout<<m<<endl;
-}
     
 
 
