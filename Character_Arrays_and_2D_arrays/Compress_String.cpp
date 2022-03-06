@@ -72,3 +72,33 @@ string getCompressedString(string &input) {
     }
     return compressedString;
 }
+/*void stringCompression(char a[]) {
+int len=strlen(a);
+int j=1;
+int count=1;
+int i=0;
+while(i<len-1){
+    while(a[i]==a[i+1]){
+        count++;
+        i++;
+    }
+    if(count>1){
+        a[j]=count+48;
+        j++;
+        a[j]=a[i+1];
+        j++;
+        i++;
+        count=1;
+    }
+    else{
+        a[j]=a[i+1];
+        j++;
+        i++;
+        count=1;
+    }
+}
+a[j]='\0';
+}
+
+
+*/
