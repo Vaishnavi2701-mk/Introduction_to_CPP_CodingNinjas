@@ -37,25 +37,52 @@ Sample Output 2:
 #include <iostream>
 using namespace std;
 
-int findUnique(int arr[], int size)
-{
+// Time Complexity= O(n)
 
+/*int findUnique(int arr[], int size){
+    int c=arr[0];
     
- int c=arr[0];
     for(int i=1;i<size;i++){
-        
         c=c^arr[i];
-       
-        
     }
-    
     return c;
-    
-    
-    
-    
-    
+}*/
+
+//Time complexity =O (nlogn)
+#include<bits/stdc++.h>
+using namespace std;
+
+int findUnique(int arr[], int size){
+    sort(arr,arr+size);
+    for(int i=0;i<size;i+=2){
+        if(arr[i]!=arr[i+1]){
+            return arr[i];
+        }
+    }
 }
+
+/*
+
+Time Complexity= O(n^2)
+
+int findUnique(int arr[],int n){
+   
+    
+    int i,j;
+    
+    for( i=0;i<n;i++){
+        for( j=0;j<n;j++){
+            if(i!=j && arr[i]==arr[j]){
+                break;
+            }
+        }
+        if(j==n){
+            return arr[i];
+        }
+    }
+}
+
+*/
 
 int main()
 {
