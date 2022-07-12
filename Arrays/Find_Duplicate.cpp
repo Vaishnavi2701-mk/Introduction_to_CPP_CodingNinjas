@@ -36,6 +36,7 @@ Sample Output 2:
 #include <iostream>
 using namespace std;
 
+/* Time Complexity= O(n^2)
 int duplicateNumber(int arr[], int size)
 {
 for(int i=0;i<size;i++){
@@ -46,7 +47,24 @@ for(int i=0;i<size;i++){
     }
 }
 }
+*/
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int duplicateNumber(int arr[], int size)
+{
+    sort(arr,arr+size);
+    for(int i=0;i<size;i++){
+        if(arr[i]==arr[i+1]){
+            return arr[i];
+        }
+  
+}
+    return -1;
+}
+
+// Time Complexity = O(nlogn)
 int main()
 {
 
