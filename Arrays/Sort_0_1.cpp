@@ -35,6 +35,7 @@ Sample Output 2:
 #include <algorithm>
 using namespace std;
 
+/* Time complexity = O(2n)
 void sortZeroesAndOne(int input[], int size)
 {
    int count=0;
@@ -52,6 +53,23 @@ void sortZeroesAndOne(int input[], int size)
       input[i]=1;
    } 
     
+    
+}*/
+
+// Time complexity = O(n)
+
+void sortZeroesAndOne(int input[], int size)
+{
+ 
+    int index=0,temp;
+    for(int i=0;i<size;i++){
+        if(input[i]==0){
+            temp= input[index];
+            input[index]=input[i];
+            input[i]=temp;
+            index++;
+        }
+    }
     
 }
 
